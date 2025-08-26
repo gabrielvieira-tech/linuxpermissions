@@ -67,10 +67,25 @@ Some files require stricter access rules. For example, "project_m.txt" is design
 </p>
 <br />
 
+<h2> Change file permissions on a hidden file </h2>
+
+<img width="931" height="412" alt="4" src="https://github.com/user-attachments/assets/b1a7eba2-6962-4145-8d8b-d0b62ef971fb" />
+<p>
+
+In this step, the focus is on a hidden file named ".project_x.txt." Since this file has been archived (use "ls -la" to see them), it should only be readable by the user and the group, with no write access allowed. Upon checking the file’s permissions, it was found that both the user and the group had incorrect write privileges, which could potentially allow unauthorized changes to an archived file.
+</p>
+<br />
+
+<img width="937" height="510" alt="4 1" src="https://github.com/user-attachments/assets/87f2f571-8102-4de1-9c73-ba68a54158ba" />
+<p>
+
+To secure the file properly, its permissions were updated so that the user and group retain read-only access, while write permissions were removed. This ensures the file remains available for reference but cannot be altered, aligning with its role as an archived record. Remember, when working with hidden files in Linux, the file name must start with a period (.). The command used to change the permissions was "chmod u-w,g-w,g+r .project_x.txt".
+</p>
+<br />
+
 <h2> TEXT </h2>
 
 <img width="935" height="180" alt="2" src="https://github.com/user-attachments/assets/1c6f4ff1-2340-4bde-b031-8092fcc3eb38" />
-
 
 <p>
 
@@ -78,3 +93,12 @@ Each entry in a directory listing begins with a 10-character (respresented by th
 </p>
 <br />
 
+<h2> TEXT </h2>
+
+<img width="935" height="180" alt="2" src="https://github.com/user-attachments/assets/1c6f4ff1-2340-4bde-b031-8092fcc3eb38" />
+
+<p>
+
+Each entry in a directory listing begins with a 10-character (respresented by the color orange) string that defines the file’s type and permissions. The very first character specifies the type of item "d" for a directory or "-" for a regular file. The next three characters represent the read(r), write(w), and execute(X) rights for the file’s owner. The following three characters specify the same permissions for the group associated with the file, and the final three characters indicate the permissions granted to all other users on the system. Whenever a hyphen (-) appears in place of a letter(r,w or x), it means that particular permission is not granted. Beyond the permissions string, the listing also shows the user who owns the file (respresented by the color yellow) and the group ownership (respresented by the color blue).
+</p>
+<br />
