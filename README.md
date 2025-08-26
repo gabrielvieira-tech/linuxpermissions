@@ -1,4 +1,4 @@
-<p align="center">
+<p align="right">
   
 ![Linux Backgrounds Free Download](https://github.com/user-attachments/assets/c6748177-3c4a-4869-845d-336fe4f4957d)
 
@@ -83,22 +83,17 @@ To secure the file properly, its permissions were updated so that the user and g
 </p>
 <br />
 
-<h2> TEXT </h2>
+<h2> Change directory permissions </h2>
 
-<img width="935" height="180" alt="2" src="https://github.com/user-attachments/assets/1c6f4ff1-2340-4bde-b031-8092fcc3eb38" />
-
+<img width="927" height="515" alt="5" src="https://github.com/user-attachments/assets/aaebe62e-fbe7-495f-929b-6af212f960b1" />
 <p>
 
-Each entry in a directory listing begins with a 10-character (respresented by the color orange) string that defines the file’s type and permissions. The very first character specifies the type of item "d" for a directory or "-" for a regular file. The next three characters represent the read(r), write(w), and execute(X) rights for the file’s owner. The following three characters specify the same permissions for the group associated with the file, and the final three characters indicate the permissions granted to all other users on the system. Whenever a hyphen (-) appears in place of a letter(r,w or x), it means that particular permission is not granted. Beyond the permissions string, the listing also shows the user who owns the file (respresented by the color yellow) and the group ownership (respresented by the color blue).
+In this step, the focus was on securing the drafts subdirectory within the projects folder. After checking its permissions, it was found that the group had execute access, which would allow unintended users to enter and view its contents. Since only the researcher2 user should be able to access this directory, the execute permission for the group was removed, ensuring that the drafts directory and its files remain restricted to the owner only. The command used to change the permissions was "chmod g-x drafts".
 </p>
 <br />
 
-<h2> TEXT </h2>
+<h2> Summary </h2>
 
-<img width="935" height="180" alt="2" src="https://github.com/user-attachments/assets/1c6f4ff1-2340-4bde-b031-8092fcc3eb38" />
-
-<p>
-
-Each entry in a directory listing begins with a 10-character (respresented by the color orange) string that defines the file’s type and permissions. The very first character specifies the type of item "d" for a directory or "-" for a regular file. The next three characters represent the read(r), write(w), and execute(X) rights for the file’s owner. The following three characters specify the same permissions for the group associated with the file, and the final three characters indicate the permissions granted to all other users on the system. Whenever a hyphen (-) appears in place of a letter(r,w or x), it means that particular permission is not granted. Beyond the permissions string, the listing also shows the user who owns the file (respresented by the color yellow) and the group ownership (respresented by the color blue).
+In this project, I gained hands-on experience with fundamental Linux Bash commands for managing file and directory permissions. I learned how to inspect permissions, identify incorrect settings, and apply changes to strengthen security. This included adjusting access for users, groups, and others across both regular and hidden files, as well as directories. These steps are an essential milestone toward developing practical skills in Linux authorization and system security.
 </p>
 <br />
